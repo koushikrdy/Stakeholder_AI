@@ -155,14 +155,14 @@ class ModelTrainer:
             print("Training Logistic Regression...")
             trained_models['logistic_regression'] = self.train_logistic_regression(
                 X_train, y_train,
-                max_iter=1000,
+                max_iter=5000,
             )
         
         if 'random_forest' in models:
             print("Training Random Forest...")
             trained_models['random_forest'] = self.train_random_forest(
                 X_train, y_train,
-                n_estimators=100,
+                n_estimators=500,
                 n_jobs=-1,
             )
         
@@ -173,7 +173,7 @@ class ModelTrainer:
                     X_train, y_train,
                     X_val=X_val,
                     y_val=y_val,
-                    n_estimators=100,
+                    n_estimators=500,
                 )
         
         return trained_models
