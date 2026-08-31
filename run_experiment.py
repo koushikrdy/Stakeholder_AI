@@ -156,7 +156,7 @@ class ResearchExperiment:
         
         # Compare baseline vs proposed
         comparison = self.evaluator.compare_baseline_vs_proposed(
-            baseline_explanation_type='shap'
+            baseline_explanation_type='SHAP'
         )
         print("\nBaseline vs. Proposed Comparison:")
         print(json.dumps(comparison, indent=2))
