@@ -1,0 +1,84 @@
+
+================================================================================
+EXPLAINABLE AI RESEARCH: STAKEHOLDER-SPECIFIC EXPLANATION SELECTION
+================================================================================
+
+RESEARCH CONTRIBUTION:
+Define explanation quality using stakeholder-specific utility rather than
+model fidelity alone.
+
+  Traditional:  Quality(E) = Fidelity(Model, E)
+  Proposed:     Quality(E) = Utility(Stakeholder, Decision, E)
+
+OPTIMAL EXPLANATION SELECTION:
+  E*_s = argmax_{E ∈ ℰ} U_s(E | x, ŷ, a)
+
+where:
+  - E*_s: Optimal explanation for stakeholder s
+  - ℰ: Set of candidate explanations (SHAP, LIME, Counterfactual, Rule-based)
+  - U_s: Utility function for stakeholder s
+  - x: Instance to explain
+  - ŷ: Model prediction
+  - a: Downstream action
+
+================================================================================
+EXPERIMENTAL RESULTS
+================================================================================
+
+1. MODEL EVALUATION
+--------------------------------------------------------------------------------
+
+logistic_regression:
+  accuracy: 0.9000
+  f1: 0.8913
+  precision: 0.9318
+  recall: 0.8542
+  auc: 0.9724
+
+random_forest:
+  accuracy: 1.0000
+  f1: 1.0000
+  precision: 1.0000
+  recall: 1.0000
+  auc: 1.0000
+
+2. EXPLANATION SELECTION SUMMARY
+--------------------------------------------------------------------------------
+
+Stakeholder: DOCTOR
+  Total instances: 10
+  Selections:
+    Counterfactual: 10 (100.0%)
+
+Stakeholder: PATIENT
+  Total instances: 10
+  Selections:
+    Rule-based: 10 (100.0%)
+
+Stakeholder: REGULATOR
+  Total instances: 10
+  Selections:
+    SHAP: 10 (100.0%)
+
+3. BASELINE VS. PROPOSED FRAMEWORK
+--------------------------------------------------------------------------------
+
+Baseline Utility (SHAP for all stakeholders):
+  doctor: 0.0000
+  patient: 0.0000
+  regulator: 0.0000
+
+Proposed Utility (Stakeholder-specific selection):
+  doctor: 0.7107
+  patient: 0.8143
+  regulator: 0.8867
+
+Improvement (%):
+  doctor: inf%
+  patient: inf%
+  regulator: inf%
+
+================================================================================
+KEY FINDING: E*_doctor ≠ E*_patient ≠ E*_regulator
+Different stakeholders require different explanations!
+================================================================================

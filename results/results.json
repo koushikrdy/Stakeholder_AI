@@ -1,0 +1,67 @@
+{
+  "model_evaluation": {
+    "logistic_regression": {
+      "accuracy": 0.9,
+      "f1": 0.8913043478260869,
+      "precision": 0.9318181818181818,
+      "recall": 0.8541666666666666,
+      "auc": 0.9723557692307692
+    },
+    "random_forest": {
+      "accuracy": 1.0,
+      "f1": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "auc": 1.0
+    }
+  },
+  "explanation_selection": {
+    "total_instances": 10,
+    "by_stakeholder": {
+      "doctor": {
+        "total": 10,
+        "selections": {
+          "Counterfactual": 10
+        },
+        "selection_percentages": {
+          "Counterfactual": 100.0
+        }
+      },
+      "patient": {
+        "total": 10,
+        "selections": {
+          "Rule-based": 10
+        },
+        "selection_percentages": {
+          "Rule-based": 100.0
+        }
+      },
+      "regulator": {
+        "total": 10,
+        "selections": {
+          "SHAP": 10
+        },
+        "selection_percentages": {
+          "SHAP": 100.0
+        }
+      }
+    }
+  },
+  "baseline_vs_proposed": {
+    "baseline": {
+      "doctor": 0.0,
+      "patient": 0.0,
+      "regulator": 0.0
+    },
+    "proposed": {
+      "doctor": 0.7107000000000001,
+      "patient": 0.8142800000000001,
+      "regulator": 0.8866666666666667
+    },
+    "improvement": {
+      "doctor": Infinity,
+      "patient": Infinity,
+      "regulator": Infinity
+    }
+  }
+}
