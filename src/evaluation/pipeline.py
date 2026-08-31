@@ -179,7 +179,7 @@ class ExperimentalEvaluator:
         
         return summary
     
-    def compare_baseline_vs_proposed(self, baseline_explanation_type: str = 'shap') -> Dict:
+    def compare_baseline_vs_proposed(self, baseline_explanation_type: str = 'SHAP') -> Dict:
         """
         Compare baseline (same explanation for all) vs. proposed (stakeholder-specific).
         
