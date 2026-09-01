@@ -47,7 +47,7 @@ This allows the system to answer questions such as:
 ### 1. Clone and enter the project
 
 ```bash
-cd /Users/koushikreddytiparthi/Desktop/RP
+git clone <github-repo-url>
 ```
 
 ### 2. Create a virtual environment
