@@ -49,19 +49,19 @@
   },
   "baseline_vs_proposed": {
     "baseline": {
-      "doctor": 0.0,
-      "patient": 0.0,
-      "regulator": 0.0
+      "doctor": 0.6432800000000002,
+      "patient": 0.5241920000000001,
+      "regulator": 0.8866666666666667
     },
     "proposed": {
-      "doctor": 0.7107000000000001,
-      "patient": 0.8142800000000001,
+      "doctor": 0.7107800000000002,
+      "patient": 0.814192,
       "regulator": 0.8866666666666667
     },
     "improvement": {
-      "doctor": Infinity,
-      "patient": Infinity,
-      "regulator": Infinity
+      "doctor": 10.493097873398828,
+      "patient": 55.32324033941759,
+      "regulator": 0.0
     }
   }
 }
