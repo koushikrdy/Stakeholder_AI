@@ -64,19 +64,19 @@ Stakeholder: REGULATOR
 --------------------------------------------------------------------------------
 
 Baseline Utility (SHAP for all stakeholders):
-  doctor: 0.0000
-  patient: 0.0000
-  regulator: 0.0000
+  doctor: 0.6433
+  patient: 0.5242
+  regulator: 0.8867
 
 Proposed Utility (Stakeholder-specific selection):
-  doctor: 0.7107
-  patient: 0.8143
+  doctor: 0.7108
+  patient: 0.8142
   regulator: 0.8867
 
 Improvement (%):
-  doctor: inf%
-  patient: inf%
-  regulator: inf%
+  doctor: 10.49%
+  patient: 55.32%
+  regulator: 0.00%
 
 ================================================================================
 KEY FINDING: E*_doctor ≠ E*_patient ≠ E*_regulator
