@@ -71,6 +71,14 @@ python3 simple_example.py
 
 This is the easiest way to understand the core idea: the same model prediction is explained differently depending on the stakeholder.
 
+### 5. Launch the browser app with Streamlit
+
+```bash
+streamlit run app.py
+```
+
+Then open the local URL shown in the terminal (usually http://localhost:8501) in your browser.
+
 ---
 
 ## Recommended usage paths
