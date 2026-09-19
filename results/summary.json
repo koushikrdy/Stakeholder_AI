@@ -1,0 +1,115 @@
+{
+  "config": {
+    "n_patients": 40000,
+    "n_explained": 600,
+    "seed": 20260914,
+    "sensitivity_draws": 200
+  },
+  "model": {
+    "n_test": 20879,
+    "event_rate": 0.5024186982135159,
+    "auc": 0.7980850630217613,
+    "brier": 0.1817837893508089,
+    "accuracy": 0.6410268691029264,
+    "decision_threshold": 0.8221640099516478,
+    "flag_rate": 0.2040806552037933,
+    "precision_at_threshold": 0.8514433231635766,
+    "recall_at_threshold": 0.3458531935176358,
+    "base_rate_at_reference": 0.2958027333040896
+  },
+  "explanation_space": [
+    "SHAP",
+    "LIME",
+    "Counterfactual",
+    "Rules"
+  ],
+  "criteria": [
+    "fidelity",
+    "completeness",
+    "sparsity",
+    "actionability",
+    "cost"
+  ],
+  "selection_frequency": {
+    "auditor": {
+      "SHAP": 0.8567,
+      "LIME": 0.0067,
+      "Counterfactual": 0.0417,
+      "Rules": 0.095
+    },
+    "doctor": {
+      "SHAP": 0.4817,
+      "LIME": 0.0183,
+      "Counterfactual": 0.2983,
+      "Rules": 0.2017
+    },
+    "patient": {
+      "SHAP": 0.04,
+      "LIME": 0.0233,
+      "Counterfactual": 0.5333,
+      "Rules": 0.4033
+    }
+  },
+  "mean_utility": {
+    "auditor": {
+      "SHAP": 0.7047,
+      "LIME": 0.4738,
+      "Counterfactual": 0.2802,
+      "Rules": 0.3092
+    },
+    "doctor": {
+      "SHAP": 0.5859,
+      "LIME": 0.4759,
+      "Counterfactual": 0.4983,
+      "Rules": 0.4366
+    },
+    "patient": {
+      "SHAP": 0.4043,
+      "LIME": 0.3806,
+      "Counterfactual": 0.5647,
+      "Rules": 0.5462
+    }
+  },
+  "divergence_rate": {
+    "auditor": 0.16,
+    "doctor": 0.365,
+    "patient": 0.8067
+  },
+  "mean_regret": {
+    "auditor": 0.0091,
+    "doctor": 0.0312,
+    "patient": 0.1891
+  },
+  "max_regret": {
+    "auditor": 0.1302,
+    "doctor": 0.2786,
+    "patient": 0.4569
+  },
+  "weight_stability": {
+    "doctor": 0.9565833333333333,
+    "patient": 0.957375,
+    "auditor": 0.9764916666666666
+  },
+  "mean_runtime_s": {
+    "Counterfactual": 0.0173,
+    "LIME": 0.0291,
+    "Rules": 0.0042,
+    "SHAP": 0.0002
+  },
+  "degenerate_fidelity_cases": 0,
+  "divergence_near_threshold": {
+    "auditor": {
+      "far_from_threshold": 0.1067,
+      "near_threshold": 0.2133
+    },
+    "doctor": {
+      "far_from_threshold": 0.18,
+      "near_threshold": 0.55
+    },
+    "patient": {
+      "far_from_threshold": 0.79,
+      "near_threshold": 0.8233
+    }
+  },
+  "wall_clock_s": 53.0
+}
