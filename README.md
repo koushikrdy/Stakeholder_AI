@@ -1,3 +1,31 @@
+# Abstract
+
+Post-hoc explanation methods are almost always evaluated against model-centric criteria such as
+fidelity and completeness. These criteria measure whether an explanation follows the model. They
+do not measure whether it helps the person who reads it. In this paper we treat the choice of an
+explanation as a decision problem. Given a prediction, a set of candidate explanations, a stakeholder
+and the decision that stakeholder is about to take, the best explanation is the one that maximises
+the utility of that stakeholder, E∗ = arg maxE∈E Us(E | x, yˆ
+, a). We make this measurable using
+s
+five criteria on a common scale. One of them, actionability, is defined with respect to the action set
+of the stakeholder, which is the set of features that stakeholder can actually change. This is what
+makes the utility depend on the stakeholder in substance, and not only through the weights. We
+also propose a budget-normalised fidelity metric. It compares an explanation with a greedy oracle
+that uses the same number of features, so that faithfulness is separated from sparsity. Standard
+deletion-based metrics mix the two. Two further measures make the main claim of the paper testable:
+the fidelity–utility divergence rate and the regret a stakeholder suffers when given the model-centric
+winner. We apply the framework to a cardiovascular risk model trained on a public cohort of 69,598
+patient records, with four candidate explanations (SHAP, LIME, counterfactuals and local rules) and
+three stakeholders (a clinician, a patient and a regulatory auditor). For the patient, the model-centric
+choice differs from the stakeholder-optimal one on 75.0% of instances, with a mean regret of 0.174
+on a scale that is about 0.90 wide. The auditor is used as a negative control and behaves the way a
+correct framework should: because the decision of the auditor is about the model and not about the
+patient, the framework agrees with current practice for 88.3% of patients, at almost zero regret. We
+also report a negative finding. On this cohort almost every feature is actionable by somebody, so
+actionability separates the clinician from the patient by only 0.06 on average, and the divergence we
+measure is driven mainly by sparsity. The framework produces stakeholder-specific selections, but
+this dataset is a weak test of the action set that is meant to produce them.
 # Model Fidelity to Decision Utility
 
 Implementation of the decision-theoretic framework in the term paper
